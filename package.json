@@ -1,6 +1,8 @@
 {
-  "name": "BackendDockerPrisma",
+  "name": "DockerPrisma",
   "version": "1.0.0",
   "main": "index.js",
+  "repository": "https://github.com/TArauujo/DockerPrisma.git",
+  "author": "thomas <thomascaraujo19@gmail.com>",
   "license": "MIT"
 }
