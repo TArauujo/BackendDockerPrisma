@@ -1,0 +1,19 @@
+# Criando uma imagem do postgres
+
+version: "3"
+
+services:
+  db-postgres-evento:
+    image: postgres:alpine
+    ports:
+      - "5435:5432"
+    container-name: "db-postgres-evento"
+    restart: always
+    volumes: 
+      - ./banco-de-dados-evento:/var/Lib/postgressql/data
+      environment:
+        POSTGRES_USER: pguser
+        POSTGRES_PASSWORD: pgpassword
+
+volume:
+  banco-de-dados-evento:
