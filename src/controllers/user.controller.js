@@ -1,10 +1,12 @@
-// import bcrypt from "bcrypt";
-import { createUser } from "../repositorys/user.repositorys";
+import bcrypt from "bcrypt";
+import { userValidation } from "../validations/user.validation.js";
+import { createUser } from "../repositorys/user.repositorys.js";
 
 export const create = async (req, res) => {
     try {
-        // const hashPassword = await bcrypt.hash(req.body.password, 10)
-        // req.body.password = hashPassword;
+        await userValidation.validate(req.body)
+        const hashPassword = await bcrypt.hash(req.body.password, 10)
+        req.body.password = hashPassword;
         const user = await createUser(req.body);
         res.status(200).send(user)
     } catch (e) {
