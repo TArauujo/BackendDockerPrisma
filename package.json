@@ -4,5 +4,19 @@
   "main": "index.js",
   "repository": "https://github.com/TArauujo/DockerPrisma.git",
   "author": "thomas <thomascaraujo19@gmail.com>",
-  "license": "MIT"
+  "license": "MIT",
+  "scripts": {
+    "start": "nodemon ./src/index.js"
+  },
+  "dependencies": {
+    "@prisma/client": "^5.8.1",
+    "cors": "^2.8.5",
+    "dotenv": "^16.4.1",
+    "express": "^4.18.2",
+    "prisma": "^5.8.1"
+  },
+  "devDependencies": {
+    "nodemon": "^3.0.3",
+    "sucrase": "^3.35.0"
+  }
 }
