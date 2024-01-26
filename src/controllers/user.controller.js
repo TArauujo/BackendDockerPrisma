@@ -1,10 +1,10 @@
- import bcrypt from "bcrypt";
+// import bcrypt from "bcrypt";
 import { createUser } from "../repositorys/user.repositorys";
 
 export const create = async (req, res) => {
     try {
-        const hashPassword = await bcrypt.hash(req.body.password, 10)
-        req.body.password = hashPassword;
+        // const hashPassword = await bcrypt.hash(req.body.password, 10)
+        // req.body.password = hashPassword;
         const user = await createUser(req.body);
         res.status(200).send(user)
     } catch (e) {
