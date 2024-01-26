@@ -1,4 +1,4 @@
-import userRoutes from "./user.routes";
+import userRoutes from "./user.route";
 
 const routes = (app) => {
     userRoutes(app);
